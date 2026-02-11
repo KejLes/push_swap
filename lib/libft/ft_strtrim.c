@@ -27,17 +27,16 @@ int	char_in_pool(char *characters, char c)
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	size_t	start_index;
-	size_t	end_index;
+	size_t	start_i;
+	size_t	end_i;
 	size_t	str_len;
 
 	str_len = ft_strlen(s1);
-	start_index = 0;
-	while (start_index < str_len && char_in_pool((char *)set, s1[start_index]))
-		start_index++;
-	end_index = str_len;
-	while (end_index > start_index && \
-		char_in_pool((char *)set, s1[end_index - 1]))
-		end_index--;
-	return (ft_substr(s1, start_index, end_index - start_index));
+	start_i = 0;
+	while (start_i < str_len && char_in_pool((char *)set, s1[start_i]))
+		start_i++;
+	end_i = str_len;
+	while (end_i > start_i && char_in_pool((char *)set, s1[end_i - 1]))
+		end_i--;
+	return (ft_substr(s1, start_i, end_i - start_i));
 }

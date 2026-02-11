@@ -6,7 +6,7 @@
 /*   By: kcanales <kcanales@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/10 23:15:28 by kcanales          #+#    #+#             */
-/*   Updated: 2026/02/10 23:15:29 by kcanales         ###   ########.fr       */
+/*   Updated: 2026/02/11 14:18:24 by kcanales         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@ void	swap_a(t_stack *stack_a)
 {
 	int	first_number;
 
-	first_number = stack_a->numbers[0];
-	stack_a->numbers[0] = stack_a->numbers[1];
-	stack_a->numbers[1] = first_number;
+	first_number = stack_a->num[0];
+	stack_a->num[0] = stack_a->num[1];
+	stack_a->num[1] = first_number;
 	ft_printf("sa\n");
 }

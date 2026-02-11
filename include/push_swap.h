@@ -6,7 +6,7 @@
 /*   By: kcanales <kcanales@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/10 23:17:01 by kcanales          #+#    #+#             */
-/*   Updated: 2026/02/11 11:37:16 by kcanales         ###   ########.fr       */
+/*   Updated: 2026/02/11 14:18:24 by kcanales         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 typedef struct s_stack
 {
 	char	stack_name;
-	int		*numbers;
+	int		*num;
 	int		count;
 	int		max_count;
 }			t_stack;

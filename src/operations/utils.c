@@ -6,7 +6,7 @@
 /*   By: kcanales <kcanales@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/10 23:15:34 by kcanales          #+#    #+#             */
-/*   Updated: 2026/02/10 23:15:35 by kcanales         ###   ########.fr       */
+/*   Updated: 2026/02/11 14:18:24 by kcanales         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	shift_forward(t_stack *stack)
 		index--;
 	while (index > 0)
 	{
-		stack->numbers[index] = stack->numbers[index - 1];
+		stack->num[index] = stack->num[index - 1];
 		index--;
 	}
 }
@@ -33,7 +33,7 @@ void	shift_backward(t_stack *stack)
 	index = 0;
 	while (index < stack->count - 1)
 	{
-		stack->numbers[index] = stack->numbers[index + 1];
+		stack->num[index] = stack->num[index + 1];
 		index++;
 	}
 }

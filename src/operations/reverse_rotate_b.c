@@ -6,7 +6,7 @@
 /*   By: kcanales <kcanales@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/10 23:14:57 by kcanales          #+#    #+#             */
-/*   Updated: 2026/02/10 23:14:58 by kcanales         ###   ########.fr       */
+/*   Updated: 2026/02/11 14:18:24 by kcanales         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@ void	reverse_rotate(t_stack *stack)
 {
 	int	last_number_save;
 
-	last_number_save = stack->numbers[stack->count - 1];
+	last_number_save = stack->num[stack->count - 1];
 	shift_forward(stack);
-	stack->numbers[0] = last_number_save;
+	stack->num[0] = last_number_save;
 }
 
 void	reverse_rotate_print(t_stack *stack)

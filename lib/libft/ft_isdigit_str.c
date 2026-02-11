@@ -6,7 +6,7 @@
 /*   By: kcanales <kcanales@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/10 22:54:04 by kcanales          #+#    #+#             */
-/*   Updated: 2026/02/11 01:50:45 by kcanales         ###   ########.fr       */
+/*   Updated: 2026/02/11 14:29:28 by kcanales         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,21 @@
 
 int	ft_isdigit_str(char *str)
 {
-	int	index;
+	int	i;
 
-	index = 0;
-	while (str[index] != 0)
+	i = 0;
+	if (str[i] == '-' || str[i] == '+')
 	{
-		if (ft_isdigit((int)(str[index])) || \
-			str[index] == '-' || str[index] == '+')
+		if (str[i + 1] != 0 && ft_isdigit((int)(str[i + 1])))
+			i++;
+		else
+			return (0);
+	}
+	while (str[i] != 0)
+	{
+		if (ft_isdigit((int)(str[i])) || str[i] == '-' || str[i] == '+')
 		{
-			index++;
+			i++;
 			continue ;
 		}
 		return (0);

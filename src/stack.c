@@ -6,7 +6,7 @@
 /*   By: kcanales <kcanales@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/10 23:16:05 by kcanales          #+#    #+#             */
-/*   Updated: 2026/02/11 00:53:37 by kcanales         ###   ########.fr       */
+/*   Updated: 2026/02/11 14:18:24 by kcanales         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,8 +53,8 @@ t_stack	*initialize_stack(char **numbers_as_strings, int skip)
 	temp_array = create_temp_array(numbers_as_strings, skip, str_arr_len);
 	if (temp_array == NULL)
 		return (free(stack), NULL);
-	stack->numbers = normalize_numbers(temp_array, str_arr_len - skip);
-	if (stack->numbers == NULL)
+	stack->num = normalize_numbers(temp_array, str_arr_len - skip);
+	if (stack->num == NULL)
 		return (free(temp_array), free(stack), NULL);
 	free(temp_array);
 	stack->count = str_arr_len - skip;
@@ -70,8 +70,8 @@ t_stack	*initialize_stack_empty(int length)
 	stack = malloc(sizeof(t_stack));
 	if (stack == NULL)
 		return (NULL);
-	stack->numbers = malloc(sizeof(int) * (length + 1));
-	if (stack->numbers == NULL)
+	stack->num = malloc(sizeof(int) * (length + 1));
+	if (stack->num == NULL)
 		return (free(stack), NULL);
 	stack->count = 0;
 	stack->max_count = length;
@@ -83,7 +83,7 @@ void	free_stack(t_stack *stack)
 {
 	if (stack == NULL)
 		return ;
-	free(stack->numbers);
+	free(stack->num);
 	free(stack);
 }
 
@@ -95,7 +95,7 @@ void	print_stack(t_stack *stack)
 	index = 0;
 	while (index < stack->count)
 	{
-		ft_printf("%d ", stack->numbers[index]);
+		ft_printf("%d ", stack->num[index]);
 		index++;
 	}
 	ft_printf("\nCount: %d\n", stack->count);
