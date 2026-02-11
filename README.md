@@ -65,6 +65,6 @@ Al completar estos pasos, la pila A contiene todos los números ordenados. Solo 
 Simplemente hacer make all y ejecutar ./push_swap con cualquier combinación de números.
 Para depurar, compila todo con la flag -g hacinedo: make debug.
 
-## Resources
+## Recursos
 Realizado con ayuda de repositorios de compañeros como de jquinde- o migugar2 o jurodrig.
 La IA ha sido utilizada como tutor, preguntaba cosas que no comprendía de varias fuentes y me lo explicaba en detalle, le preguntaba con el objetivo de entenderlo y poder replicarlo.
