@@ -18,6 +18,7 @@ CFILES := \
 	$(SRC_DIR)/operations/utils.c \
 	$(SRC_DIR)/biggest_smallest.c \
 	$(SRC_DIR)/main.c \
+	$(SRC_DIR)/sort_up_to_five.c \
 	$(SRC_DIR)/sort.c \
 	$(SRC_DIR)/stack_utils.c \
 	$(SRC_DIR)/stack.c

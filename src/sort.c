@@ -6,7 +6,7 @@
 /*   By: kcanales <kcanales@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/10 23:15:55 by kcanales          #+#    #+#             */
-/*   Updated: 2026/02/11 00:44:27 by kcanales         ###   ########.fr       */
+/*   Updated: 2026/02/11 13:27:14 by kcanales         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,8 @@ void	push_swap_sort(t_stack *stack_a, t_stack *stack_b)
 
 	if (stack_sorted(stack_a))
 		return ;
+	if (stack_a->count <= 5)
+		return (sort_up_to_five_values(stack_a, stack_b));
 	decision_median = (double)ft_sqrt(stack_a->count) * (double) 1.3;
 	while (stack_a->count > 0)
 	{
